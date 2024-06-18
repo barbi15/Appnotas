@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/inicio">
+
+    </LinearLayout>
+
+    <!-- Mensaje de bienvenida -->
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="¡BIENVENIDO A TU LISTA DE NOTAS!"
+        android:textSize="20sp"
+        android:fontFamily="@font/info_story"
+        android:layout_centerHorizontal="true"
+       />
+
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar nota"
+        android:inputType="text"
+        android:layout_margin="20dp"
+        android:layout_below="@id/welcomeTextView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/editext_custom"
+        android:padding="15dp"/>
+    <!-- ImageButton para la búsqueda manual -->
+    <ImageButton
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/searchEditText"
+        android:layout_alignBottom="@id/searchEditText"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Buscar"
+        android:layout_marginEnd="50dp"
+        android:padding="15dp"
+        android:src="@android:drawable/ic_menu_search" />
+
+    <ImageButton
+        android:id="@+id/microphoneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/searchEditText"
+        android:layout_alignBottom="@id/searchEditText"
+        android:layout_marginEnd="5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Buscar por voz"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:padding="15dp"/>
+
+    <ListView
+        android:id="@+id/notesListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="80dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:fadeScrollbars="true"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/agregarnotaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="Agregar nota"
+        app:backgroundTint="@color/yellow_light"
+        app:srcCompat="@drawable/nuevanota"
+        app:useCompatPadding="true" />
+
+    <!-- Botón Cerrar Sesión -->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesión"
+        android:backgroundTint="@color/yellow_light"
+        android:fontFamily="@font/bestschool"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="18dp"/>
+
+</RelativeLayout>

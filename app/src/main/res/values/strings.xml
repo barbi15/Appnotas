@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MemoriesNotes</string>
+    <string name="texto_registro">Registro</string>
+    <string name="texto_formulario">Completa este formulario</string>
+    <string name="login">Login</string>
+    <string name="cuenta">¿No tienes una cuenta?</string>
+    <string name="iniciar_sesion">Iniciar sesion</string>
+</resources>

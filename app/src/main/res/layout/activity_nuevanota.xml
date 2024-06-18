@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/inicio"
+    tools:context=".NuevanotaActivity">
+
+        <!-- Título -->
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:hint="Titulo"
+            android:inputType="text"
+            android:background="@drawable/editext_custom"
+            android:padding="12dp"/>
+
+        <!-- Botón para Insertar Imagen -->
+    <ImageButton
+        android:id="@+id/addImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/editext_custom3"
+        android:contentDescription="Agregar Imágenes"
+        android:padding="12dp"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <!-- Contenido -->
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:hint="Escribi aqui tus notas"
+        android:background="@drawable/editext_custom2"
+        android:fontFamily="@font/astonpoliz"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp">
+
+        <!-- Botón Guardar -->
+        <Button
+            android:id="@+id/saveNoteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/editext_custom4"
+            android:text="Guardar"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/deleteNoteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/editext_custom4"
+            android:text="Eliminar"
+            android:textSize="12sp"/>
+
+        <!-- Botón Volver al Inicio de Notas -->
+        <Button
+            android:id="@+id/backToNotesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:textSize="10sp"
+            android:background="@drawable/editext_custom4"
+            android:text="Volver al inicio" />
+
+    </LinearLayout>
+</RelativeLayout>
